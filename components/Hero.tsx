@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="flex flex-col gap-6 items-center justify-center text-center w-full mb-[112px]">
       <div className="flex flex-col gap-6 items-center max-w-3xl w-full">
-        <h1 className="text-6xl font-bold">Connect with university students through our pen pal service</h1>
+        <h1 className="lg:text-6xl text-4xl font-bold">Connect with university students through our pen pal service</h1>
         <p className="text-lg">
           Join University Pen Pals and start making meaningful connections with other university students today!
         </p>
@@ -14,9 +14,9 @@ export default function Hero() {
           <Button type="button" title="Sign Up" variant="btn-primary" href="/log-in" />
           <Button type="button" title="Learn More" variant="btn-outline" href="/discover" />
         </div>
-      <div className="w-full max-w-7xl">
-        <Spline scene="https://prod.spline.design/oogYi91XkSVVYKTf/scene.splinecode" />
-      </div>
+        <div className="w-full max-w-7xl h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+          <Spline scene="https://prod.spline.design/oogYi91XkSVVYKTf/scene.splinecode" />
+        </div>
     </section>
   )
 }

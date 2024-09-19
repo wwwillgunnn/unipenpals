@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function page() {
   return (
-    <section className="flex flex-row items-center justify-center gap-20 my-[112px] w-full overflow-x-hidden px-16">
+    <section className="flex flex-col lg:flex-row items-center justify-center gap-20 my-[112px] w-full overflow-x-hidden px-16">
       <div className="flex flex-col gap-8 items-center justify-between max-w-[75ch]">
         <div className="flex flex-col gap-6">
-          <h1 className="text-6xl font-bold">What Is A Pen Pal?</h1>
-          <p className="text-lg">
+          <h1 className="text-5xl lg:text-6xl font-bold">What Is A Pen Pal?</h1>
+          <p className="text-base lg:text-lg">
             A pen pal is someone you build a relationship with through written correspondence, traditionally by exchanging letters but increasingly through emails and messaging platforms. 
             The idea is to communicate with someone you may not know personally, often from a different location or even country, to share experiences, thoughts, and interests. 
             Pen pals often exchange ideas about their cultures, hobbies, and personal lives, fostering connections across geographic and social boundaries. 

@@ -1,12 +1,39 @@
+"use client";
+
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 
 export default function About() {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Fade in each section on scroll
+    gsap.fromTo(
+      ".fade-in",
+      { opacity: 0 },
+      {
+        opacity: 1,
+        duration: 1.5,
+        ease: "power2.out",
+        stagger: 0.5, // Staggering effect
+        scrollTrigger: {
+          trigger: ".fade-in",
+          start: "top 80%",
+          end: "top 30%",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
+
   return (
     <section className="my-20">
-      <section className="flex flex-col lg:flex-row gap-20 items-center">
-        <div className="flex flex-col gap-6 w-1/2">
-          <h1 className="text-6xl font-bold">About Us</h1>
-          <p className="text-lg max-w-[75ch]">
+      <section className="flex flex-col lg:flex-row gap-20 lg:items-center fade-in">
+        <div className="flex flex-col gap-6 w-full lg:w-1/2">
+          <h1 className="text-3xl lg:text-6xl font-bold">About Us</h1>
+          <p className="text-base lg:text-lg max-w-[75ch]">
             University Pen Pals is a platform designed for university students to connect anonymously and form meaningful one-on-one relationships. 
             Our mission is to foster meaningful connections, support isolated students, and provide a low-risk, low-commitment environment for making new friends easily. 
             We cater to university students seeking to overcome mental health challenges and meet peers they might not encounter otherwise. Our platform is dedicated to creating 
@@ -16,18 +43,18 @@ export default function About() {
             By offering this supportive environment, we aim to help students navigate the challenges of university life and improve their overall well-being.
           </p>
         </div>
-        <div className="w-1/2 flex">
+        <div className="flex w-full lg:w-1/2 fade-in">
           <Image src="/pplogo.svg" alt="logo" layout="intrinsic" width={640} height={640} />
         </div>
       </section>
 
-      <section className="flex flex-col-reverse lg:flex-row gap-20 items-center my-[112px]">
-        <div className="w-1/2 flex">
+      <section className="flex flex-col-reverse lg:flex-row gap-20 lg:items-center my-[112px] fade-in">
+        <div className="flex w-full lg:w-1/2">
           <Image src="/3 SCENE.svg" alt="logo" width={640} height={640} />
         </div>
-        <div className="flex flex-col gap-6 w-1/2">
-          <h3 className="text-4xl font-bold">Our Mission</h3>
-          <p className="text-lg max-w-[75ch]">Our mission is to provide a low-risk and low-commitment platform for university students to communicate one-on-one anonymously. 
+        <div className="flex flex-col gap-6 w-full lg:w-1/2">
+          <h3 className="text-3xl lg:text-6xl font-bold">Our Mission</h3>
+          <p className="text-base lg:text-lg max-w-[75ch]">Our mission is to provide a low-risk and low-commitment platform for university students to communicate one-on-one anonymously. 
             We are dedicated to fostering an environment where students can meet new people, share passions and interests with anonymity, and build connections at their own pace. 
             We aim to assist students who are isolated and affected by mental health issues, acknowledging that those who are heavily invested in their studies often struggle to socialize.
              Understanding that campuses can often feel desolate, our primary goal is to facilitate new friendships and bring people together through our website and app, 
@@ -36,19 +63,19 @@ export default function About() {
         </div>
       </section>
 
-      <section className="flex flex-col lg:flex-row gap-20 items-center my-[112px]">
-        <div className="flex flex-col gap-6 w-1/2">
-          <h3 className="text-4xl font-bold">Our Vision</h3>
-          <p className="text-lg max-w-[75ch]">Our vision is to create a connected and inclusive university community where every student feels empowered to form meaningful relationships. 
+      <section className="flex flex-col lg:flex-row gap-20 lg:items-center my-[112px] fade-in">
+        <div className="flex flex-col gap-6 w-full lg:w-1/2">
+          <h3 className="text-3xl lg:text-6xl font-bold">Our Vision</h3>
+          <p className="text-base lg:text-lg max-w-[75ch]">Our vision is to create a connected and inclusive university community where every student feels empowered to form meaningful relationships. 
             We envision a world where students, regardless of their background or situation, can easily find support, companionship, and a sense of belonging through genuine and 
             low-pressure interactions. By leveraging the power of anonymity and technology, we aim to break down social barriers, enhance mental well-being, and create a supportive 
              network that fosters personal growth and lifelong connections.
           </p>
         </div>
-        <div className="w-1/2 flex">
+        <div className="flex w-full lg:w-1/2">
           <Image src="/7 SCENE.svg" alt="logo" width={640} height={640} />
         </div>
       </section>      
     </section>        
-  )
+  );
 }
