@@ -13,24 +13,24 @@ export default function Contact() {
                 <input
                 type="text"
                 placeholder="Name"
-                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#F4AFAF] focus:outline-none"
+                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#E0E0E0] focus:outline-none"
                 />
                 {/* Email input */}
                 <input
                 type="email"
                 placeholder="Email"
-                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#F4AFAF] focus:outline-none"
+                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#E0E0E0] focus:outline-none"
                 />
                 {/* Message textarea */}
                 <textarea
                 placeholder="Start typing here..."
                 rows={6}
-                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#F4AFAF] focus:outline-none"
+                className="p-4 bg-transparent border-2 border-white text-white placeholder-[#E0E0E0] focus:outline-none"
                 />
                 {/* Submit button */}
                 <button
                 type="submit"
-                className="p-4 bg-[#F4AFAF] font-bold hover:bg-opacity-90"
+                className="p-4 bg-[#D48A67] font-bold hover:bg-[#BF7553]"
                 >
                 Send Message
                 </button>

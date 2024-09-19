@@ -4,7 +4,7 @@
 /* @import url('satoshi.css'); */
 
 :root {
-  --foreground-rgb: 0, 0, 0;
+  --foreground-rgb: 255, 255, 255;
   background: #6CA4B2;
 }
 

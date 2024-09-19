@@ -3,7 +3,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="py-20 px-16">
+    <footer className="my-20 mx-16">
       <div className="flex flex-col lg:flex-row justify-between w-full">
         <div className="flex flex-col gap-8">
           <div className="flex flex-row gap-4 items-center">
@@ -25,16 +25,16 @@ export default function Footer() {
         </div>
         <form>
           <h6 className="footer-title">Newsletter</h6>
-          <fieldset className="form-control w-80">
+          <fieldset className="form-control">
             <div className="join">
               <input
                 type="text"
                 placeholder="username@site.com"
-                className="input input-bordered join-item" />
-              <button className="btn btn-primary join-item">Subscribe</button>
+                className="input bg-[#6CA4B2] placeholder-[#E0E0E0] border-white join-item" />
+              <button className="btn bg-[#D48A67] hover:bg-[#BF7553] border-[#D48A67] hover:border-white text-white join-item">Subscribe</button>
             </div>
             <label className="label">
-              <span className="label-text">Stay updated with our latest news and promotions.</span>
+              <span className="label-text text-[#E0E0E0]">Stay updated with our latest news and promotions.</span>
             </label>
           </fieldset>
         </form>

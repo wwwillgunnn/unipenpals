@@ -26,7 +26,7 @@ export default function FAQ() {
                 <span>{open === 1 ? "-" : "+"}</span>
             </button>
             {open === 1 && (
-                <p className="text-gray-600 mb-4">
+                <p className="text-[#E0E0E0] mb-4">
                 Uni Pen Pals is a platform that allows university students to connect anonymously
                 through written correspondence, fostering meaningful one-on-one relationships.
                 </p>
@@ -43,7 +43,7 @@ export default function FAQ() {
                 <span>{open === 2 ? "-" : "+"}</span>
             </button>
             {open === 2 && (
-                <p className="text-gray-600 mb-4">
+                <p className="text-[#E0E0E0] mb-4">
                 You sign up, create a profile, and get matched with another student. You can then
                 start exchanging messages through our platform.
                 </p>
@@ -60,7 +60,7 @@ export default function FAQ() {
                 <span>{open === 3 ? "-" : "+"}</span>
             </button>
             {open === 3 && (
-                <p className="text-gray-600 mb-4">
+                <p className="text-[#E0E0E0] mb-4">
                 Yes, the pen pal service is free to use for all university students.
                 </p>
             )}
@@ -76,7 +76,7 @@ export default function FAQ() {
                 <span>{open === 4 ? "-" : "+"}</span>
             </button>
             {open === 4 && (
-                <p className="text-gray-600 mb-4">
+                <p className="text-[#E0E0E0] mb-4">
                 Our system matches you with a pen pal based on your interests, but if you have a
                 preference, you can specify it in your profile settings.
                 </p>
@@ -93,7 +93,7 @@ export default function FAQ() {
                 <span>{open === 5 ? "-" : "+"}</span>
             </button>
             {open === 5 && (
-                <p className="text-gray-600 mb-4">
+                <p className="text-[#E0E0E0] mb-4">
                 We take privacy seriously. All personal information is kept confidential and is not
                 shared with other users without your consent.
                 </p>
