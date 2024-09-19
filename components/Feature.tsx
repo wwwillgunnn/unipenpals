@@ -19,7 +19,7 @@ export default function Feature() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".feature-section",
-          start: "top 60%", // Adjust this to your liking
+          start: "top 80%", // Adjust this to your liking
           end: "bottom top",
           scrub: true
         }
@@ -36,7 +36,7 @@ export default function Feature() {
         ease: "power2.out",
         scrollTrigger: {
           trigger: ".feature-section",
-          start: "top 60%", // Adjust this to your liking
+          start: "top 80%", // Adjust this to your liking
           end: "bottom top",
           scrub: true
         }
