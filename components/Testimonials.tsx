@@ -1,4 +1,4 @@
-import Image from "next/image"
+import Image from "next/image";
 
 export default function Testimonials() {
   return (
@@ -18,7 +18,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h6 className="text-xl font-semibold">
-            “Uni Pen Pals is a brilliant chance for a cultural exchange, allowing for my own knowledge and conscious surrounding cultures to improve. Additionally, having a person to provide emotional support to, as well as receive, would is excellent.”
+            &ldquo;Uni Pen Pals is a brilliant chance for a cultural exchange, allowing for my own knowledge and conscious surrounding cultures to improve. Additionally, having a person to provide emotional support to, as well as receive, is excellent.&rdquo;
           </h6>
         </div>
 
@@ -35,7 +35,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h6 className="text-xl font-semibold">
-            "It’s a nice way to connect with people you may not get the chance to usually and to exchange cultural and different social experiences."
+            &ldquo;It&rsquo;s a nice way to connect with people you may not get the chance to usually and to exchange cultural and different social experiences.&rdquo;
           </h6>
         </div>
 
@@ -52,10 +52,10 @@ export default function Testimonials() {
             ))}
           </div>
           <h6 className="text-xl font-semibold">
-            "Genuinely just helping to make friendships and connect with people that could translate to irl friendships. University isn’t lacking in people wanting more friends, we just lack in opportunities to make those friends."
+            &ldquo;Genuinely just helping to make friendships and connect with people that could translate to IRL friendships. University isn&rsquo;t lacking in people wanting more friends, we just lack in opportunities to make those friends.&rdquo;
           </h6>
         </div>
       </div>
     </section>
-  )
+  );
 }
