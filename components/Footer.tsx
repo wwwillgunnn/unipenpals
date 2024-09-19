@@ -1,17 +1,26 @@
 import Image from "next/image"
+import Link from "next/link"
 
-const Footer = () => {
+export default function Footer() {
   return (
     <footer className="py-20 px-16">
-      <div className="flex flex-row justify-between w-full">
+      <div className="flex flex-col lg:flex-row justify-between w-full">
         <div className="flex flex-col gap-8">
-          <Image src="/pplogo.svg" alt="logo" width={68} height={71} />
+          <div className="flex flex-row gap-4 items-center">
+          <Image src="/pplogo.svg" alt="logo" width={60} height={60} />
+          <Link href="https://www.instagram.com/uni.penpals/" passHref>
+            <Image
+              src="/instagram-svgrepo-com.svg"
+              alt="Instagram"
+              width={40}
+              height={40}
+            />
+          </Link>
+          </div>
           <div className="flex flex-row gap-8">
-            <p className="text-base font-semibold">About Us</p>
-            <p className="text-base font-semibold">Contact Us</p>
-            <p className="text-base font-semibold">FAQs</p>
-            <p className="text-base font-semibold">Support</p>
-            <p className="text-base font-semibold">Terms</p>
+            <p className="text-base font-semibold cursor-pointer transition-all hover:font-bold">About Us</p>
+            <p className="text-base font-semibold cursor-pointer transition-all hover:font-bold">Contact Us</p>
+            <p className="text-base font-semibold cursor-pointer transition-all hover:font-bold">FAQs</p>
           </div>
         </div>
         <form>
@@ -44,5 +53,3 @@ const Footer = () => {
     </footer>
   )
 }
-
-export default Footer

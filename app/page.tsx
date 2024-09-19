@@ -6,7 +6,7 @@ import Testimonials from '@/components/Testimonials';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-5">
+    <main className="flex min-h-screen flex-col items-center justify-between mx-16 mt-20">
       <Hero />
       <Feature />
       <Benefits />

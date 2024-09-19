@@ -3,9 +3,9 @@ import Image from "next/image"
 import Link from "next/link"
 import Button from "./Button"
 
-const Navbar = () => {
+export default function Navbar() {
   return (
-    <nav className="relative flex items-center justify-between w-full h-16 px-16 py-3">
+    <nav className="relative flex items-center justify-between w-full h-16 px-16 mt-2">
       <ul className="navbar-start hidden lg:flex">
         {NAV_LINKS.map((link) => (
           <Link
@@ -23,8 +23,8 @@ const Navbar = () => {
       </Link>
   
       <div className="hidden lg:flex navbar-end gap-5">
-        <Button type="button" title="Sign Up" variant="btn btn-primary" />
-        <Button type="button" title="Log In" variant="btn btn-outline btn-primary"/>
+        <Button type="button" title="Sign Up" variant="btn-square" href="/log-in" />
+        <Button type="button" title="Log In" variant="btn-square-outline" href="/log-in"/>
       </div>
 
       {/* Hamburger Menu for mobile */}
@@ -46,15 +46,12 @@ const Navbar = () => {
         <ul
           tabIndex={0}
           className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-          <li><a>About Us</a></li>
+          <li><a>About</a></li>
           <li><a>Discover More</a></li>
           <li><a>Blog</a></li>
           <li><a>Contact Us</a></li>
         </ul>
       </div>
     </nav>
-  );
-  
+  )
 }
-
-export default Navbar
