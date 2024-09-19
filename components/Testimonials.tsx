@@ -18,7 +18,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h6 className="text-xl font-semibold">
-            &ldquo;Uni Pen Pals is a brilliant chance for a cultural exchange, allowing for my own knowledge and conscious surrounding cultures to improve. Additionally, having a person to provide emotional support to, as well as receive, would is excellent.&rdquo;
+            “Uni Pen Pals is a brilliant chance for a cultural exchange, allowing for my own knowledge and conscious surrounding cultures to improve. Additionally, having a person to provide emotional support to, as well as receive, would is excellent.”
           </h6>
         </div>
 
@@ -52,7 +52,7 @@ export default function Testimonials() {
             ))}
           </div>
           <h6 className="text-xl font-semibold">
-            &ldquo;Genuinely just helping to make friendships and connect with people that could translate to irl friendships. University isn&rsquo;t lacking in people wanting more friends, we just lack in opportunities to make those friends.&rdquo;
+            "Genuinely just helping to make friendships and connect with people that could translate to irl friendships. University isn’t lacking in people wanting more friends, we just lack in opportunities to make those friends."
           </h6>
         </div>
       </div>
