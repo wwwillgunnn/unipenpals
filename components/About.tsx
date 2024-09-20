@@ -1,37 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
+import FadeIn from "./AnimationFadeIn";
+import ScrollFadeIn from "./AnimationScrollFadeIn";
 
 export default function About() {
-  useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Fade in each section on scroll
-    gsap.fromTo(
-      ".fade-in",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1.5,
-        ease: "power2.out",
-        stagger: 0.5, // Staggering effect
-        scrollTrigger: {
-          trigger: ".fade-in",
-          start: "top 80%",
-          end: "top 30%",
-          scrub: true,
-        },
-      }
-    );
-  }, []);
-
   return (
     <section className="my-20">
-      <section className="flex flex-col lg:flex-row gap-20 lg:items-center fade-in">
-        <div className="flex flex-col gap-6 w-full lg:w-1/2">
+      <section className="flex flex-col lg:flex-row gap-20 lg:items-center">
+        <FadeIn className="flex flex-col gap-6 w-full lg:w-1/2">
           <h1 className="text-3xl lg:text-6xl font-bold">About Us</h1>
           <p className="text-base lg:text-lg max-w-[75ch]">
             University Pen Pals is a platform designed for university students to connect anonymously and form meaningful one-on-one relationships. 
@@ -42,13 +19,13 @@ export default function About() {
             our primary goal is to facilitate new friendships and bring people together through our website and app, without the pressure of high-commitment interactions. 
             By offering this supportive environment, we aim to help students navigate the challenges of university life and improve their overall well-being.
           </p>
-        </div>
-        <div className="flex w-full lg:w-1/2 fade-in">
+        </FadeIn>
+        <FadeIn className="flex w-full lg:w-1/2">
           <Image src="/pplogo.svg" alt="logo" layout="intrinsic" width={640} height={640} />
-        </div>
+        </FadeIn>
       </section>
 
-      <section className="flex flex-col-reverse lg:flex-row gap-20 lg:items-center my-[112px] fade-in">
+      <ScrollFadeIn className="flex flex-col-reverse lg:flex-row gap-20 lg:items-center my-[112px]">
         <div className="flex w-full lg:w-1/2">
           <Image src="/3 SCENE.svg" alt="logo" width={640} height={640} />
         </div>
@@ -61,9 +38,9 @@ export default function About() {
              all without the pressure of high-commitment interactions.
           </p>
         </div>
-      </section>
+      </ScrollFadeIn>
 
-      <section className="flex flex-col lg:flex-row gap-20 lg:items-center my-[112px] fade-in">
+      <ScrollFadeIn className="flex flex-col lg:flex-row gap-20 lg:items-center my-[112px]">
         <div className="flex flex-col gap-6 w-full lg:w-1/2">
           <h3 className="text-3xl lg:text-6xl font-bold">Our Vision</h3>
           <p className="text-base lg:text-lg max-w-[75ch]">Our vision is to create a connected and inclusive university community where every student feels empowered to form meaningful relationships. 
@@ -75,7 +52,7 @@ export default function About() {
         <div className="flex w-full lg:w-1/2">
           <Image src="/7 SCENE.svg" alt="logo" width={640} height={640} />
         </div>
-      </section>      
+      </ScrollFadeIn>      
     </section>        
   );
 }
