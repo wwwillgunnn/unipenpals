@@ -2,24 +2,24 @@ import { useEffect, useRef, ReactNode } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
-interface ScrollFadeInProps {
+interface ScrollStaggerProps {
   children: ReactNode;
   className?: string;
   duration?: number;
-  scrub?: boolean;
+  stagger?: number;
   start?: string;
   end?: string;
   initial?: { opacity?: number; y?: number };
   target?: { opacity?: number; y?: number };
 }
 
-const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
+const ScrollStagger: React.FC<ScrollStaggerProps> = ({
   children,
   className = '',
-  duration = 1.5,
-  scrub = true,
+  duration = 1,
+  stagger = 0.2,
   start = "top 80%",
-  end = "top 30%",
+  end = "top 50%",
   initial = { opacity: 0, y: 100 },
   target = { opacity: 1, y: 0 },
 }) => {
@@ -32,17 +32,18 @@ const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
 
     if (element) {
       gsap.fromTo(
-        element,
+        element.children, // Targeting child elements
         initial,
         {
           ...target,
           duration,
           ease: "power2.out",
+          stagger, // Adding stagger effect
           scrollTrigger: {
             trigger: element,
             start,
             end,
-            scrub,
+            scrub: true,
           },
         }
       );
@@ -52,13 +53,13 @@ const ScrollFadeIn: React.FC<ScrollFadeInProps> = ({
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, [duration, scrub, start, end]);
+  }, [duration, stagger, start, end, initial, target]);
 
   return (
-    <div ref={ref} className={className}>
+    <div ref={ref} className={`staggered-animation ${className}`}>
       {children}
     </div>
   );
 };
 
-export default ScrollFadeIn;
+export default ScrollStagger;
