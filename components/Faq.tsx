@@ -10,10 +10,10 @@ export default function FAQ() {
   };
 
   return (
-    <section className="my-16 mx-8">
-        <div className="flex flex-col gap-6">
-            <h1 className="text-5xl font-bold text-center mb-12">Frequently Asked Questions</h1>
-            <p className="text-lg text-center">Find answers to frequently asked questions to help you quickly resolve common queries.</p>
+    <section className="my-[112px] mx-8" id="faq">
+        <div className="flex flex-col gap-5 lg:gap-12">
+            <h1 className="text-3xl lg:text-5xl font-bold text-center">Frequently Asked Questions</h1>
+            <p className="text-base lg:text-lg text-center">Find answers to frequently asked questions to help you quickly resolve common queries.</p>
         </div>
         <div className="max-w-4xl mx-auto mt-20">
             {/* FAQ 1 */}
@@ -77,8 +77,7 @@ export default function FAQ() {
             </button>
             {open === 4 && (
                 <p className="text-[#E0E0E0] mb-4">
-                Our system matches you with a pen pal based on your interests, but if you have a
-                preference, you can specify it in your profile settings.
+                No, our system will randomly match you with a pen pal.
                 </p>
             )}
             </div>
