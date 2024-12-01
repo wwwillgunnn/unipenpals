@@ -1,0 +1,10 @@
+{
+    "projects": [
+      {
+        "src": "client/",
+        "buildCommand": "npm install && npm run build",
+        "outputDirectory": "client/.next"
+      }
+    ]
+  }
+  
