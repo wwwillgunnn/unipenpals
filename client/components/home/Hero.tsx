@@ -10,10 +10,10 @@ export default function Hero() {
     <section className="hero flex flex-col gap-6 items-center justify-center text-center w-full mb-[112px]">
       <FadeIn className="flex flex-col gap-6 items-center w-full" stagger={0.5}>
         <header className="flex flex-col gap-6 items-center max-w-3xl w-full">
-          <h1 className="lg:text-6xl text-4xl font-bold">
+          <h1 className="text-6xl md:text-6xl sm:text-4xl font-bold">
             Connect with university students through our pen pal service
           </h1>
-          <p className="text-lg">
+          <p className="text-lg md:text-lg sm:text-sm">
             Join University Pen Pals and start making meaningful connections with other university students today!
           </p>
         </header>
