@@ -9,9 +9,9 @@ export default function DiscoverFeatures() {
             Customize your profile, enjoy multilingual support, and navigate our user-friendly interface with ease.
         </p>
         <div>
-            <Image src="/pplogo.svg" alt="logo" layout="intrinsic" height={240}/>
-            <h4></h4>
-            <p></p>
+          <Image src="/pplogo.svg" alt="logo" width={240} height={240} />
+          <h4></h4>
+          <p></p>
         </div>
     </section>
   )
